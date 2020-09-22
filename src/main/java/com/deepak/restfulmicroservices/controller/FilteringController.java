@@ -32,7 +32,7 @@ public class FilteringController {
 	public MappingJacksonValue getDynamicFilter() {
 		FilteringBean filteringBean = new FilteringBean("Deepak", "Cos", "123", "1234");
 		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter
-				.filterOutAllExcept("userName","organisation","password");
+				.filterOutAllExcept("userName","organization","password");
 		
 		FilterProvider provider = new SimpleFilterProvider().addFilter("SampleBeanFilter", filter);
 		
@@ -46,7 +46,7 @@ public class FilteringController {
 		List<FilteringBean> filteringList = Arrays.asList(new FilteringBean("Deepak", "Cos", "123", "1234"),
 				new FilteringBean("Deepak2", "Cos2", "456", "1235"));
 		SimpleBeanPropertyFilter filter = SimpleBeanPropertyFilter
-				.filterOutAllExcept("userName","organisation");
+				.filterOutAllExcept("userName","organization");
 		
 		FilterProvider provider = new SimpleFilterProvider().addFilter("SampleBeanFilter", filter);
 		
